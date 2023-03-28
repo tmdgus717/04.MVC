@@ -93,7 +93,7 @@ public class UserServiceTest {
 		Assert.assertNotNull(userService.getUser("user05"));
 	}
 	
-	//@Test
+	@Test
 	 public void testUpdateUser() throws Exception{
 		 
 		User user = userService.getUser("testUserId");
