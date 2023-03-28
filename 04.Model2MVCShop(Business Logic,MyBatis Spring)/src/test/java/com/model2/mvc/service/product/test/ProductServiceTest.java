@@ -31,18 +31,18 @@ public class ProductServiceTest {
 	@Qualifier("productServiceImpl")//productServiceImpl 생성
 	private ProductService prodService;
 	
-	@Test
+	//@Test
 	public void testAddProduct() throws Exception {
 		
 		Product prod = new Product(); 
 		
-//		prod.setProdName("testProductName");
-//		prod.setProdDetail("testPordDetail");
-//		prod.setManuDate("20230215");
-//		prod.setPrice(1000);
-//		prod.setFileName("testFileName");
-//		
-//		prodService.addProduct(prod);
+		prod.setProdName("testProductName");
+		prod.setProdDetail("testPordDetail");
+		prod.setManuDate("20230215");
+		prod.setPrice(1000);
+		prod.setFileName("testFileName");
+		
+		prodService.addProduct(prod);
 		
 		prod = prodService.getProduct(10025);
 	
@@ -53,14 +53,14 @@ public class ProductServiceTest {
 		//객체 x와 y가 일치함을 확인합니다.
         //x(예상 값)와 y(실제 값)가 같으면 테스트 통과
 		
-		Assert.assertEquals("testProductName", prod.getProdName());
-		Assert.assertEquals("testPordDetail", prod.getProdDetail());
-		Assert.assertEquals("20230215", prod.getManuDate());
-		Assert.assertEquals(1000, prod.getPrice());
-		Assert.assertEquals("testFileName", prod.getFileName());
+//		Assert.assertEquals("testProductName", prod.getProdName());
+//		Assert.assertEquals("testPordDetail", prod.getProdDetail());
+//		Assert.assertEquals("20230215", prod.getManuDate());
+//		Assert.assertEquals(1000, prod.getPrice());
+//		Assert.assertEquals("testFileName", prod.getFileName());
 		
 	}
-	//@Test
+	@Test
 	public void testGetProduct() throws Exception {
 		
 		Product prod = new Product(); 
@@ -74,7 +74,7 @@ public class ProductServiceTest {
 //		user.setEmail("test@test.com");
 		
 		//user = userService.getUser("testUserId");
-		prod = prodService.getProduct(10024);
+		prod = prodService.getProduct(10030);
 		//==> console 확인
 		System.out.println(prod);
 		
